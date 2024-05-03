@@ -91,21 +91,72 @@ class _MyHomePageState extends State<MyHomePage> {
                         int value= _generateRandomValue();
                         if(value==1){
                           vidas-=1;
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                title: Text("Encontraste una abeja obrera"),
+                                content: Text("Te quedan $vidas vidas"),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text("Aceptar"),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
                         }else if(value==2){
                           vidas=vidas;
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                title: Text("Encontraste una larva"),
+                                content: Text("Te quedan $vidas vidas"),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text("Aceptar"),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
                         }else if(value==3){
                           vidas-=2;
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                title: Text("Encontraste un zángano"),
+                                content: Text("Te quedan $vidas vidas"),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text("Aceptar"),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
                         }else{
                           winner=1;
                         }
-                        if (id==50) {
+                        if (winner==1) {
                           winner = 1;
                           showDialog(
                             context: context,
                             builder: (BuildContext context) {
                               return AlertDialog(
                                 title: Text("¡Ganaste!"),
-                                content: Text("¡Felicidades, has ganado el juego!"),
+                                content: Text("¡Felicidades, encontraste a la abeja reina!"),
                                 actions: [
                                   TextButton(
                                     onPressed: () {
@@ -136,24 +187,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             },
                           );
                         }
-                        showModalBottomSheet(
-                          context: context,
-                          builder: (BuildContext context) {
-                            return Container(
-                              width: MediaQuery.of(context).size.width,
-                              height: MediaQuery.of(context).size.height * 0.3,
-                              decoration: const BoxDecoration(
-                                color: Colors.green,
-                                borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(20),
-                                  topRight: Radius.circular(20),
-                                ),
-                              ),
-                              alignment: Alignment.center,
-                              child: Text("Te quedan $vidas vidas"),
-                            );
-                          },
-                        );
+
                       },
                       child:  const Text(""),
                       //child: Text(randomNumber != 4 ? randomNumber.toString() : ""),
@@ -182,21 +216,72 @@ class _MyHomePageState extends State<MyHomePage> {
                         int value= _generateRandomValue();
                         if(value==1){
                           vidas-=1;
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                title: Text("Encontraste una abeja obrera"),
+                                content: Text("Te quedan $vidas vidas"),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text("Aceptar"),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
                         }else if(value==2){
                           vidas=vidas;
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                title: Text("Encontraste una larva"),
+                                content: Text("Te quedan $vidas vidas"),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text("Aceptar"),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
                         }else if(value==3){
                           vidas-=2;
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                title: Text("Encontraste un zángano"),
+                                content: Text("Te quedan $vidas vidas"),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text("Aceptar"),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
                         }else{
                           winner=1;
                         }
-                        if (id==50) {
+                        if (winner==1) {
                           winner = 1;
                           showDialog(
                             context: context,
                             builder: (BuildContext context) {
                               return AlertDialog(
                                 title: Text("¡Ganaste!"),
-                                content: Text("¡Felicidades, has ganado el juego!"),
+                                content: Text("¡Felicidades, encontraste a la abeja reina!"),
                                 actions: [
                                   TextButton(
                                     onPressed: () {
@@ -227,24 +312,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             },
                           );
                         }
-                        showModalBottomSheet(
-                          context: context,
-                          builder: (BuildContext context) {
-                            return Container(
-                              width: MediaQuery.of(context).size.width,
-                              height: MediaQuery.of(context).size.height * 0.3,
-                              decoration: const BoxDecoration(
-                                color: Colors.green,
-                                borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(20),
-                                  topRight: Radius.circular(20),
-                                ),
-                              ),
-                              alignment: Alignment.center,
-                              child: Text("Te quedan $vidas vidas"),
-                            );
-                          },
-                        );
+
                       },
                       child:  const Text(""),
                       //child: Text(randomNumber != 4 ? randomNumber.toString() : ""),
@@ -273,21 +341,72 @@ class _MyHomePageState extends State<MyHomePage> {
                         int value= _generateRandomValue();
                         if(value==1){
                           vidas-=1;
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                title: Text("Encontraste una abeja obrera"),
+                                content: Text("Te quedan $vidas vidas"),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text("Aceptar"),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
                         }else if(value==2){
                           vidas=vidas;
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                title: Text("Encontraste una larva"),
+                                content: Text("Te quedan $vidas vidas"),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text("Aceptar"),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
                         }else if(value==3){
                           vidas-=2;
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                title: Text("Encontraste un zángano"),
+                                content: Text("Te quedan $vidas vidas"),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text("Aceptar"),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
                         }else{
                           winner=1;
                         }
-                        if (id==50) {
+                        if (winner==1) {
                           winner = 1;
                           showDialog(
                             context: context,
                             builder: (BuildContext context) {
                               return AlertDialog(
                                 title: Text("¡Ganaste!"),
-                                content: Text("¡Felicidades, has ganado el juego!"),
+                                content: Text("¡Felicidades, encontraste a la abeja reina!"),
                                 actions: [
                                   TextButton(
                                     onPressed: () {
@@ -318,24 +437,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             },
                           );
                         }
-                        showModalBottomSheet(
-                          context: context,
-                          builder: (BuildContext context) {
-                            return Container(
-                              width: MediaQuery.of(context).size.width,
-                              height: MediaQuery.of(context).size.height * 0.3,
-                              decoration: const BoxDecoration(
-                                color: Colors.green,
-                                borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(20),
-                                  topRight: Radius.circular(20),
-                                ),
-                              ),
-                              alignment: Alignment.center,
-                              child: Text("Te quedan $vidas vidas"),
-                            );
-                          },
-                        );
+
                       },
                       child:  const Text(""),
                       //child: Text(randomNumber != 4 ? randomNumber.toString() : ""),
@@ -363,21 +465,72 @@ class _MyHomePageState extends State<MyHomePage> {
                         int value= _generateRandomValue();
                         if(value==1){
                           vidas-=1;
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                title: Text("Encontraste una abeja obrera"),
+                                content: Text("Te quedan $vidas vidas"),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text("Aceptar"),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
                         }else if(value==2){
                           vidas=vidas;
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                title: Text("Encontraste una larva"),
+                                content: Text("Te quedan $vidas vidas"),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text("Aceptar"),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
                         }else if(value==3){
                           vidas-=2;
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                title: Text("Encontraste un zángano"),
+                                content: Text("Te quedan $vidas vidas"),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text("Aceptar"),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
                         }else{
                           winner=1;
                         }
-                        if (id==50) {
+                        if (winner==1) {
                           winner = 1;
                           showDialog(
                             context: context,
                             builder: (BuildContext context) {
                               return AlertDialog(
                                 title: Text("¡Ganaste!"),
-                                content: Text("¡Felicidades, has ganado el juego!"),
+                                content: Text("¡Felicidades, encontraste a la abeja reina!"),
                                 actions: [
                                   TextButton(
                                     onPressed: () {
@@ -408,24 +561,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             },
                           );
                         }
-                        showModalBottomSheet(
-                          context: context,
-                          builder: (BuildContext context) {
-                            return Container(
-                              width: MediaQuery.of(context).size.width,
-                              height: MediaQuery.of(context).size.height * 0.3,
-                              decoration: const BoxDecoration(
-                                color: Colors.green,
-                                borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(20),
-                                  topRight: Radius.circular(20),
-                                ),
-                              ),
-                              alignment: Alignment.center,
-                              child: Text("Te quedan $vidas vidas"),
-                            );
-                          },
-                        );
+
                       },
                       child:  const Text(""),
                       //child: Text(randomNumber != 4 ? randomNumber.toString() : ""),
@@ -453,10 +589,61 @@ class _MyHomePageState extends State<MyHomePage> {
                         int value= _generateRandomValue();
                         if(value==1){
                           vidas-=1;
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                title: Text("Encontraste una abeja obrera"),
+                                content: Text("Te quedan $vidas vidas"),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text("Aceptar"),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
                         }else if(value==2){
                           vidas=vidas;
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                title: Text("Encontraste una larva"),
+                                content: Text("Te quedan $vidas vidas"),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text("Aceptar"),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
                         }else if(value==3){
                           vidas-=2;
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                title: Text("Encontraste un zángano"),
+                                content: Text("Te quedan $vidas vidas"),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text("Aceptar"),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
                         }else{
                           winner=1;
                         }
@@ -467,7 +654,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             builder: (BuildContext context) {
                               return AlertDialog(
                                 title: Text("¡Ganaste!"),
-                                content: Text("¡Felicidades, has ganado el juego!"),
+                                content: Text("¡Felicidades, encontraste a la abeja reina!"),
                                 actions: [
                                   TextButton(
                                     onPressed: () {
@@ -498,24 +685,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             },
                           );
                         }
-                        showModalBottomSheet(
-                          context: context,
-                          builder: (BuildContext context) {
-                            return Container(
-                              width: MediaQuery.of(context).size.width,
-                              height: MediaQuery.of(context).size.height * 0.3,
-                              decoration: const BoxDecoration(
-                                color: Colors.green,
-                                borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(20),
-                                  topRight: Radius.circular(20),
-                                ),
-                              ),
-                              alignment: Alignment.center,
-                              child: Text("Te quedan $vidas vidas"),
-                            );
-                          },
-                        );
+
                       },
                       child:  const Text(""),
                       //child: Text(randomNumber != 4 ? randomNumber.toString() : ""),
