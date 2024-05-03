@@ -508,7 +508,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             builder: (BuildContext context) {
                               return AlertDialog(
                                 title: Text("Encontraste un zángano"),
-                                content: Text("Te quedan $vidas vidas"),
+                                content: Text("Te quedan $vidas vidas."),
                                 actions: [
                                   TextButton(
                                     onPressed: () {
@@ -647,7 +647,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         }else{
                           winner=1;
                         }
-                        if (id==50) {
+                        if (winner==1) {
                           winner = 1;
                           showDialog(
                             context: context,
